@@ -11,7 +11,7 @@ $result = mysqli_query($con,$query);
 ?>
 <table class="table">
   <thead>
-    <tr>
+    <tr class  = "text-center bg-dark text-white text-uppercase">
       <th scope="col">id</th>
       <th scope="col">name</th>
       <th scope="col">email</th>
@@ -30,14 +30,14 @@ $result = mysqli_query($con,$query);
 
   ?>
   <tbody>
-    <tr>
-      <td><?php echo $id?></td>
+    <tr class = "text-center bg-light text-secondary">
+      <td ><?php echo $id?></td>
       <td><?php echo $name?></td>
       <td><?php echo $name?></td>
 
       <td><?php echo $pass?></td>
       <td><a class = "btn btn-primary px-2 py-1" href="edit.php?updateid =<?php echo $id?>">edit</a></td>
-      <td><a class = "btn btn-danger px-2 py-1" href="delete.php?deleteid=<?php echo $id?>">delete</a></td>
+      <td><a class = "btn btn-danger px-2 py-1"  href="delete.php?deleteid=<?php echo $id?>">delete</a></td>
 
     </tr>
 

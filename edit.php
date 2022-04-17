@@ -2,20 +2,19 @@
 include ("connect.php");
 ?>
 
+
+
 <?php
 
-
-$id = $_GET['updateid'];
-
 if(isset($_POST['submit'])){
-
+    $id  = $_GET['updateid'];
     $usr  = $_POST['name'];
     $email  = $_POST['email'];
     $pass  = $_POST['password'];
-    $sql = "UPDATE student_info SET id = $id , name = '$usr', email = $email, Password = $pass WHERE id = $id";
+    $sql = "update student_info set id = $id , name = '$usr', email = '$email', Password = '$pass' where id = $id";
     $result = mysqli_query($con,$sql);
     if($result){
-        echo "update";
+        header("location:show.php?updateSuccess");
     }else{
         echo "not";
     }
