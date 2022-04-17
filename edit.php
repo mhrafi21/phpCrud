@@ -5,10 +5,8 @@ include ("connect.php");
 <?php
 
 
-if(isset($_GET['updateid'])){
-    $id = $_GET['updateid'];
+$id = $_GET['updateid'];
 
-  
 if(isset($_POST['submit'])){
 
     $usr  = $_POST['name'];
@@ -23,7 +21,7 @@ if(isset($_POST['submit'])){
     }
 
 }
-  }
+  
 ?>
 <form class = "w-75 m-auto py-4" action="edit.php" method = "post">
 <input class = "form-control my-2" type="text" name="name" placeholder = "name" >
